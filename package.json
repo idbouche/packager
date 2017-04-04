@@ -28,11 +28,8 @@
   },
   "scripts": {
     "start": "electron .",
-    "watch": "./node_modules/.bin/webpack-dev-server",
-    "electron-rebuild": "./node_modules/.bin/electron-rebuild",
-    "build": "electron-packager . packager --platform=linux --arch=x64 --overwrite --prune=true --out=dist --asar",
     "rpm64": "electron-installer-redhat --src dist/packager-linux-x64/ --dest dist/test/ --arch x86_64",
-    "private": "build --linux"
+    "build": "electron-packager . packager --platform=linux --arch=x64 --overwrite --prune=true --out=dist --asar && npm run rpm64"
   },
   "dependencies": {
     "electron": "^1.6.2",
