@@ -1,7 +1,14 @@
 body {
-  background-color: #000;
+  background-color: #666666;
+  text-align: center;
+}
+#app {
+
 }
 
-div.myDiv {
-  color: #f00;
+.btn {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 5%;
 }
