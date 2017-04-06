@@ -18,13 +18,14 @@ Vue.component('todo', {
 
 Vue.component('platform', {
   props: ['show'],
-  template: '<button v-on:click="addMac">{{show}}</button>' ,
+  template: '<button v-on:click="addMac">biuld for {{show}}</button>' ,
   data: function () {
     return data
   },
 
   methods: {
    addMac: function () {
+     console.log(this.show);
      var nameOfButton =  `number ${this.cont += 1} test`
      this.name = nameOfButton
      this.message = this.message.split('').reverse().join('')

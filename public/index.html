@@ -6,19 +6,33 @@
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
-     <div id="app">
-       <p>{{ message }}</p>
-       <div class="btn">
-         <todo v-on:addBtn="reverseMessage" :style="btnAdd"></todo>
-         <platform v-on:buildMac="reverseMessage" :style="btnPlatform" show="biuld for Mac"></platform>
-         <platform v-on:buildLinux="reverseMessage" :style="btnPlatform" show="biuld for Linux"></platform>
-         <platform v-on:buildWin="reverseMessage" :style="btnPlatform" show="biuld for Win"></platform>
-       </div>
-     </div>
+    <div id="app">
+      <p>{{ message }}</p>
+      <div class="list-articles-grid grid-4-tiny-1">
+        <article class="list-articles-item">
+          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt="" width="400" height="340">
+        </article>
+        <article class="list-articles-item">
+          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt="" width="400" height="340">
+        </article>
+        <article class="list-articles-item">
+          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt=""  width="400" height="340">
+        </article>
+        <article class="list-articles-item">
+          <img class="list-articles-photo " src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt=""  width="400" height="340">
+        </article>
+      </div>
 
-     <script src="https://unpkg.com/vue"></script>
-     <script src="index.js"></script>
+      <div class="btn">
+        <todo v-on:addBtn="reverseMessage" :style="btnAdd"></todo>
+        <platform v-on:buildMac="reverseMessage" :style="btnPlatform" show="Mac"></platform>
+        <platform v-on:buildLinux="reverseMessage" :style="btnPlatform" show="Linux"></platform>
+        <platform v-on:buildWin="reverseMessage" :style="btnPlatform" show="Win"></platform>
+      </div>
 
- </body>
+      <script src="https://unpkg.com/vue"></script>
+      <script src="index.js"></script>
+
+    </body>
 
 </html>
