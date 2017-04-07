@@ -3,33 +3,44 @@
   <head>
     <title>Packager</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
+    <h1>Build APP for all platform</h1>
+    <div class="list-articles-grid grid-4-tiny-1">
+      <article class="list-articles-item">
+        <img class="list-articles-photo" src="./images/app.png" alt="" width="300" height="300">
+      </article>
+      <article class="list-articles-item">
+        <img class="list-articles-photo" src="./images/electron.png" alt="" width="300" height="300">
+      </article>
+      <article class="list-articles-item">
+        <img class="list-articles-photo" src="./images/arrow.png" alt="" width="300" height="300">
+      </article>
+      <article class="list-articles-item">
+        <img class="list-articles-photo" src="./images/apple.png" alt="" width="300" height="300">
+      </article>
+      <article class="list-articles-item">
+        <img class="list-articles-photo" src="./images/Windows.png" alt=""  width="300" height="300">
+      </article>
+      <article class="list-articles-item">
+        <img class="list-articles-photo " src="./images/linux.png" alt=""  width="300" height="300">
+      </article>
+    </div>
+    <h3>Drap and drop your project hair</h3>
+    <div   class="filedragdrop" id="dropzone">
+      <input type="file" id="filedragdrop" multiple >
+    </div>
     <div id="app">
-      <p>{{ message }}</p>
-      <div class="list-articles-grid grid-4-tiny-1">
-        <article class="list-articles-item">
-          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt="" width="400" height="340">
-        </article>
-        <article class="list-articles-item">
-          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt="" width="400" height="340">
-        </article>
-        <article class="list-articles-item">
-          <img class="list-articles-photo" src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt=""  width="400" height="340">
-        </article>
-        <article class="list-articles-item">
-          <img class="list-articles-photo " src="https://lut.im/R81a1DkoAV/AsZ1Nq1SpcFYU0Wd.jpg" alt=""  width="400" height="340">
-        </article>
-      </div>
-
       <div class="btn">
-        <todo v-on:addBtn="reverseMessage" :style="btnAdd"></todo>
-        <platform v-on:buildMac="reverseMessage" :style="btnPlatform" show="Mac"></platform>
-        <platform v-on:buildLinux="reverseMessage" :style="btnPlatform" show="Linux"></platform>
-        <platform v-on:buildWin="reverseMessage" :style="btnPlatform" show="Win"></platform>
+        <label for="filedrag" :style="btnAdd" >Chois on folder</label>
+        <shows v-on:addbtn="reverseMessage" :style="hide" ></shows>
+        <platformmac v-on:buildMac="reverseMessage" :style="btnPlatform" show="apple"></platformmac>
+        <platformlinux v-on:buildLinux="reverseMessage" :style="btnPlatform" show="linux"></platformlinux>
+        <platformwin v-on:buildWin="reverseMessage" :style="btnPlatform" show="windows"></platformwin>
       </div>
-
+    </div>
       <script src="https://unpkg.com/vue"></script>
       <script src="index.js"></script>
 
